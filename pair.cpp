@@ -22,5 +22,17 @@ int main() {
     //  for(auto n: students){
     //      cout << n.first << " " << n.second;
     //  }
+
+
+    // tuple<string,int ,int> t = {"alim", 23, 101};
+
+    // cout << get<0>(t) << " " << get<1>(t) << " " << get<2>(t) << "\n";
+    // auto [name, age, roll] = t;
+    // cout << name << " " << age << " " << roll << "\n";
+
+    pair<int, pair<string, double>> student;
+    student = {101, {"alim", 3.75}};
+
+    cout << student.first << " " << student.second.first << " " << student.second.second << "\n";   
         return 0;
 }
