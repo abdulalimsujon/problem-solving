@@ -2,8 +2,8 @@
 using namespace std;
 
 int main() {
-    int x;
-    cin >> x;      // reads from input.txt
-    cout << x;     // writes to output.txt
+    ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+
     return 0;
 }
