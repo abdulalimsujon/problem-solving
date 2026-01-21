@@ -11,7 +11,7 @@ int main() {
     // cout << p.first << " << " << p.second << "\n";
     int n;
     cin >> n;
-    // pair<string, int> students[n];
+    //// pair<string, int> students[n];
 
     // for (int i = 0;i < n; i++) {
     //     cin >> students[i].first >> students[i].second;
