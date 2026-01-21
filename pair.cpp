@@ -30,9 +30,9 @@ int main() {
     // auto [name, age, roll] = t;
     // cout << name << " " << age << " " << roll << "\n";
 
-    pair<int, pair<string, double>> student;
-    student = {101, {"alim", 3.75}};
+    // pair<int, pair<string, double>> student;
+    // student = {101, {"alim", 3.75}};
 
-    cout << student.first << " " << student.second.first << " " << student.second.second << "\n";   
+    // cout << student.first << " " << student.second.first << " " << student.second.second << "\n";   
         return 0;
 }
