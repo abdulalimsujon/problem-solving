@@ -39,7 +39,28 @@ int main() {
     // for (auto i = v.begin(); i != v.end(); i++){
     //     cout << *i << " ";
     // }
- ////
+
     // cout << *--v.end() << "\n"; // last element
-        return 0;
+
+    // reverse(v.begin()+2, v.end());
+    // sort(v.begin(), v.end());
+    // sort(v.begin(), v.end(), greater<int>());
+    for (auto x : v) {
+        cout << x << " ";
+    }
+
+    // auto mx = *max_element(v.begin(), v.end());
+    // auto mn = *min_element(v.begin(), v.end());
+    // auto maxElemIndex = max_element(v.begin(), v.end()) - v.begin();
+
+     //insert,erase,find -->  best use in array
+     v.insert(v.begin() + 2, 10); // insert 10 at index 2
+     cout << "\n";
+      for(auto x:v){
+        cout << x << " ";
+      }
+      v.erase(v.begin() + 3);
+  
+      cout << "\n";
+      return 0;
 }
