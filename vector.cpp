@@ -53,8 +53,9 @@ int main() {
     // auto mn = *min_element(v.begin(), v.end());
     // auto maxElemIndex = max_element(v.begin(), v.end()) - v.begin();
 
-     //insert,erase,find -->  best use in array
+     //insert,erase-->  best use in array
      v.insert(v.begin() + 2, 10); // insert 10 at index 2
+     v.erase(v.begin() + 4); // erase element at index 4    
      cout << "\n";
       for(auto x:v){
         cout << x << " ";
