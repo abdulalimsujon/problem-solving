@@ -15,16 +15,16 @@ int main() {
     mp[8] = 12; // another way to insert key value pair
     mp[52] = 15; // update value for key 5
 
-    // for(auto[key, value]: mp){
-    //     cout << key << "==>" << value << "\n";
-    // }    
+    for(auto[key, value]: mp){
+        cout << key << "==>" << value << "\n";
+    }    
     
-    // for(auto it:mp){
-    //     cout << it.first << "==>" << it.second << "\n";     
-    // }
+    for(auto it:mp){
+        cout << it.first << "==>" << it.second << "\n";     
+    }
 
-    // auto it = mp.find(3);
-    // cout << "Found key 3 with value: " << it->second << "\n";
+    auto it = mp.find(3);
+    cout << "Found key 3 with value: " << it->second << "\n";
 
 //    auto it = mp.find(500);
 //    if(it == mp.end()){
@@ -41,13 +41,13 @@ int main() {
     // mp.erase(3);
     // consfused a value exist or not and find it and erase it
 
-    // auto it = mp.find(24);
+    auto it = mp.find(24);
 
-    // if(it != mp.end()){
-    //     mp.erase(it);
-    // } else {
-    //     cout << "Key 24 not found, cannot erase\n";
-    // }   
+    if(it != mp.end()){
+        mp.erase(it);
+    } else {
+        cout << "Key 24 not found, cannot erase\n";
+    }   
     
     // cout << "Size of map: " << mp.size() << "\n";
     // cout <<"empty " << mp.empty() << "\n"; // 0 means not empty , 1 means empty
