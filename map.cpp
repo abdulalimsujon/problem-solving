@@ -60,10 +60,14 @@ int main() {
        for(auto a: mp){
         cout << a.first << "==>" << a.second << "\n";
        }
-
+         //  Returns an iterator to the first element whose key is NOT LESS THAN key
+       // (i.e. >= key)
+       
        auto it = mp.lower_bound(5); // >= 5 
        cout << "Lower bound of 5: " << it->first << "==>" << it->second << "\n";
-       auto  i = mp.upper_bound(9); // >  strictly upper value  8 ans
+       auto  i = mp.upper_bound(9); // >  strictly upper value  9 ans
+        // Returns an iterator to the first element whose key is GREATER THAN key
+       // (i.e. > key)
          cout << "Upper bound of 5: " << i->first << "==>" << i->second << "\n";
        return 0;
 }
