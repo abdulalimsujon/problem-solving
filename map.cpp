@@ -9,7 +9,7 @@ int main() {
     // if we keep differnt values for same key , it will consider last value only
 
     map<int, int> mp;
-    mp.insert({51, 10});
+    mp.insert({51, 10});  //set and map are used insert
     mp.insert({3, 6});
     mp.insert({6, 6});
     mp[8] = 12; // another way to insert key value pair

@@ -55,11 +55,15 @@ int main() {
 
      //insert,erase-->  best use in array
      v.insert(v.begin() + 2, 10); // insert 10 at index 2
-     v.erase(v.begin() + 4); // erase element at index 4    
+
+
+     v.erase(v.begin() + 4); // erase element at index 4
+     auto nextOfBegin = *v.begin() + 1; // we cannot do it in set multiset and in map
      cout << "\n";
-      for(auto x:v){
-        cout << x << " ";
-      }
+     for (auto x : v)
+     {
+         cout << x << " ";
+     }
       v.erase(v.begin() + 3);
   
       cout << "\n";
