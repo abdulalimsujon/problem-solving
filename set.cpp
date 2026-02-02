@@ -41,6 +41,15 @@ int main() {
    // O(log n)
     s.count(5); // a particular element is exist or not 
     // if return 0 then exist and  return 1 exist 
+    //lower bound is to find first element which is greater than or equal to given element
+    auto it2 = s.lower_bound(7); // O(log n)    given value or immediately greater than given value
+    auto it3 = s.upper_bound(7); // O(log n)    it will give strctly greater than given element
+    cout << "Lower bound of 7: ";
+    if (it3 != s.end()) {
+        cout << *it3 << "\n";
+    } else {        
+        cout << "No element found\n";
+    }
 
     return 0;
 }
