@@ -1,3 +1,235 @@
+# C++ STL Learning Notes
+
+This repository contains my learning notes and practice on the C++ Standard Template Library (STL).  
+As a student, I learned these containers to improve problem solving skills and write clean and efficient code.
+
+---
+
+## Pair
+
+A pair stores exactly two related values.
+
+Common operations:
+- make_pair(a, b)
+- first
+- second
+- comparison using <, >, ==
+
+Sorting behavior:
+- Sorted by first element
+- If first elements are equal, sorted by second element
+
+---
+
+## Tuple
+
+A tuple stores more than two values.
+
+Common operations:
+- make_tuple()
+- get<index>(tuple)
+- tie()
+- structured binding
+
+Use cases:
+- Returning multiple values from a function
+- Grouping different data types
+
+---
+
+## Vector
+
+A vector is a dynamic array.
+
+Common operations:
+- push_back()
+- pop_back()
+- size()
+- resize()
+- clear()
+- empty()
+- front()
+- back()
+- insert()
+- erase()
+- begin(), end()
+- sort()
+- reverse()
+
+Notes:
+- Fast random access
+- Slow insertion or deletion in the middle
+
+---
+
+## Deque
+
+A deque is a double ended queue.
+
+Common operations:
+- push_back()
+- push_front()
+- pop_back()
+- pop_front()
+- front()
+- back()
+- insert()
+- erase()
+- size()
+- clear()
+
+Use case:
+- Efficient insertion and deletion from both ends
+
+---
+
+## String
+
+A string is used for handling text.
+
+Common operations:
+- push_back()
+- pop_back()
+- size()
+- length()
+- substr()
+- find()
+- clear()
+- empty()
+- front()
+- back()
+- compare()
+
+Notes:
+- Safer and easier than character arrays
+
+---
+
+## Two Dimensional Vector
+
+A 2D vector is a vector of vectors.
+
+Common operations:
+- push_back() on rows
+- size() for number of rows
+- v[i].size() for columns
+- access using v[i][j]
+
+Use cases:
+- Grids
+- Matrices
+- Variable length rows
+
+---
+
+## Set
+
+A set stores unique elements in sorted order.
+
+Common operations:
+- insert()
+- erase()
+- find()
+- count()
+- lower_bound()
+- upper_bound()
+- begin(), end()
+- size()
+- clear()
+- empty()
+
+Time complexity:
+- Insert, erase, search in O(log n)
+
+---
+
+## Multiset
+
+A multiset is similar to set but allows duplicates.
+
+Common operations:
+- insert()
+- erase()
+- find()
+- count()
+- lower_bound()
+- upper_bound()
+- begin(), end()
+
+Notes:
+- erase(value) removes all occurrences
+- erase(iterator) removes only one occurrence
+
+---
+
+## Set and Multiset of Pair
+
+Sorting rule:
+- First element of pair is compared first
+- Second element is compared if first is equal
+
+Difference:
+- Set of pair does not allow duplicate pairs
+- Multiset of pair allows duplicate pairs
+
+Operations:
+- insert(pair)
+- find(pair)
+- erase(pair or iterator)
+- lower_bound(pair)
+- upper_bound(pair)
+
+---
+
+## Map
+
+A map stores key value pairs with unique keys.
+
+Common operations:
+- insert()
+- operator[]
+- erase()
+- find()
+- count()
+- lower_bound()
+- upper_bound()
+- begin(), end()
+- size()
+- clear()
+- empty()
+
+Notes:
+- Keys are sorted
+- Accessing a missing key inserts it with default value
+
+---
+
+## Priority Queue
+
+A priority queue keeps the largest or smallest element at the top.
+
+Common operations:
+- push()
+- pop()
+- top()
+- size()
+- empty()
+
+Notes:
+- Max heap by default
+- Min heap using greater comparator
+
+---
+
+## Conclusion
+
+Learning C++ STL has helped me write cleaner code and solve problems efficiently.  
+This repository reflects my learning journey as a student exploring data structures and algorithms.
+
+
+
+
+
 Pair and Tuple
 #include <bits/stdc++.h>
 using namespace std;
