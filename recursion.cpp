@@ -28,7 +28,15 @@ bool palindrome(vector<int> &a, int l, int r) {
 
     return palindrome(a, l + 1, r - 1);
 }
-
+bool solve(long long n) {
+    if (n == 1) return true;
+ 
+    if (n % 10 == 0 && solve(n / 10)) return true;
+    if (n % 20 == 0 && solve(n / 20)) return true;
+ 
+    return false;
+}
+ 
 int fibo(int n){
          
     if(n<2){
