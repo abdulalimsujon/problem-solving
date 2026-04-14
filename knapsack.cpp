@@ -4,6 +4,29 @@ using namespace std;
 int val[1005], weight[1005];
 int dp[1005][1005];
 
+
+// class Solution {
+// public:
+//     int dp[105];
+
+//     int rec(int n,vector<int>& nums){
+//         if(n < 0) return 0;
+//         if(dp[n] != -1) return dp[n];
+
+//         int opt1 = nums[n]+rec(n-2,nums);
+//         int opt2 = rec(n-1,nums);
+          
+//           dp[n] = max(opt1,opt2);
+
+//         return dp[n];
+//     }
+     
+//     int rob(vector<int>& nums) {
+//         memset(dp,-1,sizeof(dp));
+//         return rec(nums.size()-1,nums);
+//     }
+// }
+
 int knapsack(int i, int max_weight) {
     // Base case
     if (i < 0 || max_weight <= 0) {
