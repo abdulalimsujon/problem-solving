@@ -4,6 +4,7 @@ using namespace std;
 int val[1005], weight[1005];
 int dp[1005][1005];
 
+///snapsack
 
 // class Solution {
 // public:
