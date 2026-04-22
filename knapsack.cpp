@@ -69,6 +69,46 @@ int dp[1005][1005];
 // }
 
 
+///equal sum 
+
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// int n, sum;
+// int a[1005];
+
+// bool equal_sum(int i, int sum) {
+
+   
+//     if (sum == 0) return true;
+//     if (i < 0) return false;
+
+//     if (a[i] <= sum) {
+//         bool opt1 = equal_sum(i - 1, sum - a[i]);
+//         bool opt2 = equal_sum(i - 1, sum);
+//         return opt1 || opt2;  
+//     } else {
+//         return equal_sum(i - 1, sum);
+//     }
+// }
+
+// int main() {
+//     ios::sync_with_stdio(false);
+//     cin.tie(nullptr);
+
+//     cin >> n >> sum;
+
+//     for (int i = 0; i < n; i++) {
+//         cin >> a[i];
+//     }
+
+//     cout << equal_sum(n - 1, sum);
+
+//     return 0;
+// }
+
+
+
 int knapsack(int i, int max_weight) {
     // Base case
     if (i < 0 || max_weight <= 0) {
