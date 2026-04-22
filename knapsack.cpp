@@ -28,6 +28,47 @@ int dp[1005][1005];
 //     }
 // }
 
+
+//subset sum
+// #include <bits/stdc++.h>
+// using namespace std;
+// int a[1005];
+
+// bool count(int  i,int sum) {
+    
+//     if (i < 0  ) {
+//         if(sum == 0){
+//           return true;
+//         }else{
+//           return false;
+//         }     
+//     }
+//     if(a[i] <= sum ){
+//      bool opt1 = count(i - 1, sum - a[i]);
+//      bool opt2 = count(i - 1, sum);
+//        return opt1 || opt2;
+//     }else{
+//       return count(i - 1, sum);
+//     }
+  
+// }
+// int main() {
+//     ios::sync_with_stdio(false);
+//     cin.tie(nullptr);
+//     int n, sum;
+//     cin >> n;
+//     cin >> sum;
+
+//     for (int i = 0; i < n; i++) {
+//         cin >> a[i];
+//     }
+
+//     cout << count(n - 1, sum);
+
+//     return 0;
+// }
+
+
 int knapsack(int i, int max_weight) {
     // Base case
     if (i < 0 || max_weight <= 0) {
