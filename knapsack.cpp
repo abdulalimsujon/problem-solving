@@ -30,42 +30,28 @@ int dp[1005][1005];
 
 
 //subset sum
-// #include <bits/stdc++.h>
-// using namespace std;
-// int a[1005];
-
-// bool count(int  i,int sum) {
-    
-//     if (i < 0  ) {
-//         if(sum == 0){
-//           return true;
-//         }else{
-//           return false;
-//         }     
-//     }
-//     if(a[i] <= sum ){
-//      bool opt1 = count(i - 1, sum - a[i]);
-//      bool opt2 = count(i - 1, sum);
-//        return opt1 || opt2;
-//     }else{
-//       return count(i - 1, sum);
-//     }
+// int  subset_sum(int  i,int sum) {
   
-// }
-// int main() {
-//     ios::sync_with_stdio(false);
-//     cin.tie(nullptr);
-//     int n, sum;
-//     cin >> n;
-//     cin >> sum;
-
-//     for (int i = 0; i < n; i++) {
-//         cin >> a[i];
+//     if (i < 0  ) {
+        
+//       if (sum == 0) return 1;
+//       else
+//         return 0;
 //     }
-
-//     cout << count(n - 1, sum);
-
-//     return 0;
+//      if(dp[i][sum] != -1){
+//       return dp[i][sum];
+//     } 
+//     if(a[i] <= sum ){
+//      int  opt1 = subset_sum(i - 1, sum - a[i]);
+//      int  opt2 = subset_sum(i - 1, sum);
+    
+//      return dp[i][sum] = opt1 + opt2;
+    
+//     }
+//     else
+//     {
+//       return dp[i][sum] = subset_sum(i - 1, sum);
+//     }
 // }
 
 
