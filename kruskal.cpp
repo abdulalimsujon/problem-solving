@@ -1,7 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int par[1005];
 int groupSize[1005];
+
 int find(int node)
 {
     // while(par[node] != -1){
@@ -11,7 +13,7 @@ int find(int node)
     // return node;
 
    //recursion with optimization
-    cout << node << endl;
+    // cout << node << endl;
     if (par[node] == -1)
     {
         return node;
@@ -37,17 +39,46 @@ void dsu_union(int node1,int node2){
     }
 }
 
+class Edge{
+    public:
+        int a, b, c;
+        Edge(int a,int b,int c){
+            this->a = a;
+            this->b = b;
+            this->c = c;
+        }
+};
+
+bool cmp(Edge l,Edge r){
+    return l.c < r.c;
+}
 int main()
 {
+    int n, e;
+    cin >> n >> e;
+    vector<Edge> edge_list;
+
     memset(par, -1, sizeof(par));
     for (int i = 0; i < 1005; i++) {
     groupSize[i] = 1;
-}
-
-    dsu_union(1, 2); 
-    dsu_union(3, 4); 
-    for (int i = 0; i < 6;i++){
-        cout << i << "==>" << par[i] << "here ==>" << groupSize[i] << endl;
     }
-    return 0;
+    while(e--){
+        int a, b, c;
+        cin >> a >> b >> c;
+        edge_list.push_back(Edge(a, b, c));
+    }
+
+    sort(edge_list.begin(), edge_list.end(), cmp);
+    int total_cost = 0;
+
+    for (auto ed: edge_list){
+        int parA = find(ed.a);
+        int parB = find(ed.b);
+        if(parA != parB){
+            dsu_union(ed.a, ed.b);
+            total_cost += ed.c;
+        }
+    }
+
+    cout << "the total cost ==>" << total_cost << endl;
 }
