@@ -1,2 +1,6 @@
+   // for (int i = l; i <=r;i++){
 
-    return 0;
+    //     cout << arr[i] << " ";
+     
+    // }
+    //    cout << endl;

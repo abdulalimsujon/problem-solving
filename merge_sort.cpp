@@ -2,13 +2,56 @@
 using namespace std;
 int arr[5005];
 
-void devide(int l,int r){
-    for (int i = l; i <=r;i++){
+void conquer(int c[],int l,int mid,int r){
 
-        cout << arr[i] << " ";
-     
+    int n = mid - l + 1;
+    int a[n];
+
+    int k = l;
+    for (int i = 0; i < n;i++,k++){
+        a[i] = c[k];
     }
-       cout << endl;
+
+    int m = r - mid;
+    int b[m];
+    for (int i = 0; i < m;i++,k++){
+        b[i] = c[k];
+    }
+
+    int i=0, j=0, curr=l;
+    while(i<n && j < m){
+        if(a[i]<b[j]){
+            c[curr] = a[i];
+            i++;
+            curr++;
+        }else{
+            c[curr] = b[j];
+            curr++;
+            j++;
+        }
+    }
+
+    while(i<n){
+        c[curr] = a[i];
+        i++;
+        curr++;
+    }
+    
+    while(j<m){
+        c[curr] = b[j];
+        j++;
+        curr++;
+    }
+
+}
+
+void devide(int l,int r){
+    // for (int i = l; i <=r;i++){
+
+    //     cout << arr[i] << " ";
+     
+    // }
+    //    cout << endl;
 
         if (l >= r)
         {
@@ -17,7 +60,11 @@ void devide(int l,int r){
     int mid = (l + r) / 2;
     devide(l, mid);
     devide(mid + 1, r);
+
+    conquer(arr, l, mid, r);
 }
+
+
 int main(){
 
     // this is conquer part
@@ -75,4 +122,10 @@ int main(){
     }
 
     devide(0, n - 1);
+
+        for (int i = 0; i < n;i++){
+        cout << arr[i] << " "; 
+    }
+
+    return 0;
 }
