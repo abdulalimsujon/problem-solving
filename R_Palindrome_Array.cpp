@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+///yrtsdhsdfyh
 bool isPalindrome(vector<long long>& a, int l, int r) {
     if (l >= r) return true;          // base case
     if (a[l] != a[r]) return false;   // mismatch
